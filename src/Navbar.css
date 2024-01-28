@@ -1,0 +1,110 @@
+.navbar {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 20px;
+  margin-right: 1.5em;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+}
+
+.btn {
+  margin-left: auto;
+}
+
+.log-btn {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.log-btn:hover {
+  color: hsl(0, 0%, 8%);
+}
+
+.reg-btn {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 41%);
+  padding: 10px 15px;
+  border: solid 1px hsl(0, 0%, 41%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.reg-btn:hover {
+  color: hsl(0, 0%, 8%);
+  border-color: hsl(0, 0%, 8%);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 12;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 8;
+}
+
+@media (max-width: 600px) {
+  .menu,
+  .nav {
+    display: block;
+  }
+
+  .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 60%;
+    z-index: 10;
+    padding-top: 5rem;
+    align-items: left;
+    padding-left: 1em;
+    background-color: hsl(0, 0%, 98%);
+    transition: 0.15s ease-in-out;
+  }
+
+  .active {
+    right: 0;
+  }
+
+  .reg-btn,
+  .log-btn {
+    display: block;
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

@@ -1,0 +1,123 @@
+.main-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 100%;
+  padding-top: 2em;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 3em;
+  width: 45%;
+}
+
+.main-img {
+  width: 45%;
+}
+
+.main-img img {
+  width: 70%;
+  float: right;
+}
+
+.content-title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: hsl(0, 0%, 8%);
+  letter-spacing: 2px;
+}
+
+.text-container p {
+  color: hsl(0, 0%, 41%);
+  font-size: 18px;
+  margin: 2em 2em 2em 0;
+}
+
+.learn-btn {
+  width: 200px;
+  font-family: inherit;
+  background-color: hsl(0, 0%, 8%);
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+  font-size: 18px;
+  border-style: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+}
+
+.learn-btn:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  border: 1px solid hsl(0, 0%, 8%);
+}
+
+.client {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.client img {
+  width: 70px;
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .text-container {
+    order: 2;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 1.5em;
+  }
+
+  .content-title {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  .text-container p {
+    font-size: 16px;
+    margin: 1.5em 0;
+  }
+
+  .main-img {
+    order: 1;
+    width: 100%;
+  }
+
+  .main-img img {
+    content: url("./image-hero-mobile.png");
+    display: block;
+    width: 100%;
+    float: none;
+    object-fit: cover;
+  }
+
+  .learn-btn {
+    width: 150px;
+    font-size: 16px;
+  }
+}
